@@ -50,7 +50,34 @@ Chromium-&amp;-Browser-Technology
  
 # Browser engine
   https://en.wikipedia.org/wiki/Browser_engine
+  Besides "browser engine", two other terms are in common use regarding related concepts: "layout engine" and "rendering engine".[1][2][3] In theory, layout and rendering (or "painting") could be handled by separate engines. In practice, however, they are tightly coupled and rarely considered separately.
   
+  JS Engine and Browser Engine
+  the implementation of JS engines is decoupled from browser engines. In a web browser, the two engines work in concert via the shared DOM data structure.
+  
+  Browser engines are used in other types of programs besides web browsers. Email clients need them to display HTML email. The Electron framework, which is powered by the two engines of the Google Chrome browser, has been used to create many applications.
+  
+ WEBKIT 
+  Google originally used WebKit for its Chrome browser but eventually forked it to create the Blink engine.[6] All Chromium-based browsers use Blink, as do applications built with CEF, Electron, or any other framework that embeds Chromium.
+  
+  
+# Chromium Embedded Framework
+  https://en.wikipedia.org/wiki/Chromium_Embedded_Framework
+  The Chromium Embedded Framework (CEF) is an open-source software framework for embedding a Chromium web browser within another application. This enables developers to add web browsing functionality to their application, as well as the ability to use HTML, CSS, and JavaScript to create the application's user interface (or just portions of it).
+
+CEF runs on Linux, macOS, and Windows. It has many language bindings including C, C++, Go, Java, and Python.
+  
+  CEF 3 is a multi-process implementation based on the Chromium Content API and has performance similar to Google Chrome.[5] It uses asynchronous messaging to communicate between the main application process and one or more render processes (Blink + V8 JavaScript engine).
+   The single-process run mode is not supported, but still present; currently is being used for debugging purposes only.[6]
+  
+  CEF comes with a sample application called CefClient that is written in C++ using WinAPI, Cocoa, or GTK (depending on the platform) and contains demos of various features.[7][8] Newer versions include a sample application called CefSimple that, along with an accompanying tutorial, show how to create a simple application using CEF 3.[9]
+  
+  
+  
+  
+# How browsers work				
+	Behind the scenes of modern web browsers				VIMP   TO Explore
+  http://taligarsiel.com/Projects/howbrowserswork1.htm
   
   
   
