@@ -60,7 +60,8 @@ UDP packet add Port No
   to unwrap the UDP packet, identify the target application by the destination port, and
   deliver the message. Nothing more, nothing less.
 
-UDP is NULL Protocol - drops source port,checksum, and connection mgmt responsibility to Application layer
+UDP is NULL Protocol 
+- drops source port,checksum, and connection mgmt responsibility to Application layer
   both the source port and the checksum fields are optional fields in UDP datagrams.
   The IP packet contains its own header checksum, and the application can choose to omit 
   the UDP checksum, which means that all the error detection and error correction can be delegated
@@ -94,11 +95,12 @@ TCP VS UDP
   each application read yields the full message; 
   datagrams cannot be fragmented.
   
+  UDP is a simple, stateless protocol, suitable for bootstrapping other application protocols on top: 
+  virtually all of the protocol design decisions are left to the application above it.  
   
+  Connection-State Timeouts
   
-  
-  
-  
+the primary feature of UDP is all the features it omits: no connection state, handshakes, retransmissions, reassembly, reordering, congestion control, congestion avoidance, flow control, or even optional error checking. 
   
   
   
